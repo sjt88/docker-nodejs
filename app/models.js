@@ -3,9 +3,9 @@ module.exports = {
   login: function (data) {
     if (!data.username) return {err: true, msg: 'no username'}
     if (!data.password) return {err: true, msg: 'no password'}
-    return { msg: 'login ok!' }
+    return { msg: 'login ok!', ok: true}
   },
-  profile: function (data) {
+  getProfile: function (data) {
     if (!data.loggedIn) return {err: true, msg: 'not logged in :('}
     return {msg: {username: 'simon', fullName: 'Simon Tweed'}}
   }
